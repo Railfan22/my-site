@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Heya! Nice to see you!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -67,7 +68,7 @@
     margin: 0;
     font-family: "Fraunces", serif;
     font-weight: 600;
-    font-size: 2.6rem;
+    font-size: clamp(2rem, 8vw, 2.6rem);
     line-height: 1.1;
     letter-spacing: -0.01em;
   }
@@ -194,8 +195,35 @@
     color: var(--ink);
   }
 
+  @media (max-width: 520px){
+    body{ padding: 28px 18px 40px; }
+    .header{ margin-bottom: 24px; }
+    .subnote{ margin-bottom: 26px; }
+    .disclaimer{ padding: 14px 16px; }
+  }
+
+  @media (max-width: 400px){
+    .role{
+      grid-template-columns: 1fr;
+      gap: 2px;
+    }
+    .role .title{
+      margin-top: 0;
+    }
+    .role .status{
+      justify-self: start;
+      padding: 0 0 2px;
+    }
+    .role .note{
+      grid-column: 1 / 2;
+      margin-top: 6px;
+    }
+  }
+
   @media (max-width: 460px){
     footer{ justify-content: center; text-align: center; }
+    .socials{ gap: 18px; }
+    .socials a{ width: 44px; height: 44px; }
   }
 </style>
 </head>
@@ -224,6 +252,13 @@
       <span class="status current">Current</span>
       <div class="title">Public Relations Member &amp; Customer Services Rep</div>
       <div class="note">I was previously a moderator, although the department was disbanded.</div>
+    </div>
+
+    <div class="role">
+      <div class="company">Excel Resort</div>
+      <span class="status current">Current</span>
+      <div class="title">Park Operations Manager
+      </div>
     </div>
 
     <div class="role">
