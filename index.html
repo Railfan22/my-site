@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Heya! Nice to see you!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -194,6 +195,13 @@
   }
 
   @media (max-width: 460px){
+    body{ padding: 24px 16px 32px; }
+    .header h2{ font-size: 2rem; }
+    .header .eyebrow{ font-size: 1.2rem; }
+    .disclaimer{ padding: 14px 16px; }
+    .role{ grid-template-columns: 1fr; }
+    .role .status{ justify-self: start; margin-top: 8px; }
+    .role .note{ grid-column: 1; }
     footer{ justify-content: center; text-align: center; }
   }
 </style>
