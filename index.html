@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Heya! Nice to see you!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper: #faf7f2;
-    --ink: #1f1b16;
-    --clay: #a8492f;
-    --soft: #746a5e;
-    --rule: #ddd4c6;
+    --paper: #1a1714;
+    --ink: #e8e0d4;
+    --clay: #c45839;
+    --gold: #c99a4a;
+    --soft: #aca295;
+    --rule: #4a443d;
   }
   *{ box-sizing: border-box; }
   html,body{
@@ -32,8 +32,8 @@
   /* Disclaimer */
   .disclaimer{
     border-left: 3px solid;
-    border-image: linear-gradient(180deg, var(--clay), rgba(168,73,47,0.15)) 1 100%;
-    background: rgba(168,73,47,0.05);
+    border-image: linear-gradient(180deg, var(--clay), rgba(196,88,57,0.15)) 1 100%;
+    background: rgba(196,88,57,0.08);
     border-radius: 0 6px 6px 0;
     padding: 16px 22px;
     margin-top: 36px;
@@ -134,7 +134,7 @@
     justify-self: end;
     padding-top: 3px;
   }
-  .status.current{ color: var(--clay); font-weight: 600; }
+  .status.current{ color: var(--gold); font-weight: 600; }
   .status.previous{ color: var(--soft); }
 
   .role .note{
@@ -168,7 +168,7 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #fff;
+    background: #2a2520;
     border: 1px solid var(--rule);
     color: var(--soft);
     transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
@@ -195,13 +195,6 @@
   }
 
   @media (max-width: 460px){
-    body{ padding: 24px 16px 32px; }
-    .header h2{ font-size: 2rem; }
-    .header .eyebrow{ font-size: 1.2rem; }
-    .disclaimer{ padding: 14px 16px; }
-    .role{ grid-template-columns: 1fr; }
-    .role .status{ justify-self: start; margin-top: 8px; }
-    .role .note{ grid-column: 1; }
     footer{ justify-content: center; text-align: center; }
   }
 </style>
